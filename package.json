@@ -1,0 +1,26 @@
+{
+  "name": "video-studio",
+  "version": "1.0.0",
+  "description": "分享视频工作台（Remotion）：一个仓库维护多支视频，公共框架 + 每主题一个目录，内置配音/音效/字幕",
+  "scripts": {
+    "dev": "remotion studio",
+    "audio": "python3 scripts/gen_sfx.py && python3 scripts/gen_audio.py",
+    "new": "node scripts/new_video.mjs",
+    "render:browser": "remotion render browser-journey out/browser-journey.mp4",
+    "render:template": "remotion render template out/template.mp4",
+    "render:all": "remotion render browser-journey out/browser-journey.mp4 && remotion render template out/template.mp4",
+    "upgrade": "remotion upgrade"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/transitions": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.5.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "title": {
+    "durationInFrames": 221,
+    "seconds": 6.23
+  },
+  "prepare": {
+    "durationInFrames": 278,
+    "seconds": 8.11
+  },
+  "config": {
+    "durationInFrames": 234,
+    "seconds": 6.64
+  },
+  "flow": {
+    "durationInFrames": 328,
+    "seconds": 9.79
+  },
+  "exchange": {
+    "durationInFrames": 267,
+    "seconds": 7.76
+  },
+  "recap": {
+    "durationInFrames": 259,
+    "seconds": 7.47
+  }
+}

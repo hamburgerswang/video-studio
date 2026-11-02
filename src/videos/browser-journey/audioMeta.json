@@ -1,0 +1,38 @@
+{
+  "intro": {
+    "durationInFrames": 222,
+    "seconds": 6.25
+  },
+  "url": {
+    "durationInFrames": 289,
+    "seconds": 8.47
+  },
+  "dns": {
+    "durationInFrames": 381,
+    "seconds": 11.55
+  },
+  "tcp": {
+    "durationInFrames": 286,
+    "seconds": 8.39
+  },
+  "tls": {
+    "durationInFrames": 311,
+    "seconds": 9.21
+  },
+  "request": {
+    "durationInFrames": 288,
+    "seconds": 8.46
+  },
+  "server": {
+    "durationInFrames": 302,
+    "seconds": 8.93
+  },
+  "render": {
+    "durationInFrames": 375,
+    "seconds": 11.34
+  },
+  "outro": {
+    "durationInFrames": 232,
+    "seconds": 6.57
+  }
+}

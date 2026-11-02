@@ -1,0 +1,38 @@
+# 依赖
+node_modules/
+
+# Remotion 渲染输出
+out/
+
+# Python（配音/音效生成脚本）
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# 环境变量与密钥
+.env
+.env.*
+!.env.example
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 构建缓存
+.cache/
+dist/
+build/
+
+# 编辑器 / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db
