@@ -36,16 +36,21 @@ def env(i, n, attack=0.02, release=0.3):
 def whoosh():
     n = int(0.55 * RATE)
     out = []
-    prev = 0.0
+    lp = [0.0, 0.0, 0.0, 0.0]
     for i in range(n):
         t = i / n
-        noise = random.uniform(-1, 1)
-        # 低通：与上一个样本平滑，制造“呼”的气流感
-        prev = prev * 0.85 + noise * 0.15
-        # 音量包络：快速上升再衰减
-        amp = (math.sin(math.pi * t) ** 1.5) * 0.6
-        out.append(prev * amp)
-    return out
+        # 低通平滑系数随时间增大（0.90→0.98），气流越来越闷
+        a = 0.90 + 0.08 * t
+        x = random.uniform(-1, 1)
+        # 4 级级联低通：压掉白噪声的“沙沙”高频，只留柔和气流
+        for k in range(len(lp)):
+            lp[k] = lp[k] * a + x * (1 - a)
+            x = lp[k]
+        amp = math.sin(math.pi * t) ** 1.6  # 先升后降的气流包络
+        out.append(x * amp)
+    # 级联低通后幅度很小，统一归一化到柔和音量
+    peak = max((abs(s) for s in out), default=1.0) or 1.0
+    return [s / peak * 0.5 for s in out]
 
 
 def ding(freqs, dur=0.8, decay=5.0, amp=0.5):
@@ -68,10 +73,13 @@ def typing():
     while i < n - int(0.05 * RATE):
         # 每隔约 85ms 一次按键声
         burst = int(random.uniform(0.012, 0.02) * RATE)
+        lp = 0.0
         for j in range(burst):
             if i + j >= n:
                 break
-            out[i + j] += random.uniform(-1, 1) * math.exp(-28 * (j / RATE)) * 0.35
+            x = random.uniform(-1, 1)
+            lp = lp * 0.6 + x * 0.4  # 单级低通，削掉最尖的高频
+            out[i + j] += lp * math.exp(-28 * (j / RATE)) * 0.22
         i += int(random.uniform(0.07, 0.1) * RATE)
     return out
 
