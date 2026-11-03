@@ -1,0 +1,22 @@
+{
+  "title": {
+    "durationInFrames": 217,
+    "seconds": 6.09
+  },
+  "files": {
+    "durationInFrames": 257,
+    "seconds": 7.43
+  },
+  "command": {
+    "durationInFrames": 215,
+    "seconds": 6.03
+  },
+  "steps": {
+    "durationInFrames": 323,
+    "seconds": 9.61
+  },
+  "recap": {
+    "durationInFrames": 205,
+    "seconds": 5.68
+  }
+}

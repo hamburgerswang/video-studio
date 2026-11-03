@@ -1,0 +1,26 @@
+{
+  "title": {
+    "durationInFrames": 235,
+    "seconds": 6.69
+  },
+  "structure": {
+    "durationInFrames": 291,
+    "seconds": 8.54
+  },
+  "define": {
+    "durationInFrames": 296,
+    "seconds": 8.72
+  },
+  "duration": {
+    "durationInFrames": 318,
+    "seconds": 9.45
+  },
+  "render": {
+    "durationInFrames": 243,
+    "seconds": 6.96
+  },
+  "recap": {
+    "durationInFrames": 230,
+    "seconds": 6.53
+  }
+}

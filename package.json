@@ -6,6 +6,7 @@
     "dev": "remotion studio",
     "audio": "python3 scripts/gen_sfx.py && python3 scripts/gen_audio.py",
     "new": "node scripts/new_video.mjs",
+    "make": "node scripts/from_md.mjs",
     "render:browser": "remotion render browser-journey out/browser-journey.mp4",
     "render:template": "remotion render template out/template.mp4",
     "render:all": "remotion render browser-journey out/browser-journey.mp4 && remotion render template out/template.mp4",
